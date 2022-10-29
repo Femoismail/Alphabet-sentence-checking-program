@@ -1,0 +1,27 @@
+#This is an alphabet sentence checking program using python.
+#The aim of this program is to check each word in a sentence and find out which words begin with an alphabet you define.
+#The program displays the output of all words that begin with the alphabet as well as it shows the number of words that begin with that alphabet.
+
+# In order to run the program copy code and paste in visual studio code, click run and follow the prompts to execute the program.
+
+# each line of code is commented to explain what it does.
+
+sentence = input("Please enter a sentence :") # User must type in a sentence.
+
+print("PLEASE NOTE: Your alphabet is case sensitive.")
+alphabet = input("Please enter Alphabet :") # User must type in a Alphabet in order to see which words in the sentence begins with that Alphabet.
+
+sentence_list = sentence.split(" ") # we split the sentence at each space in the sentence and assign each word to a list.
+
+counter = 0 # a counter variable is used to keep track of each iteration.
+
+word_counter = 0 # word counter is used to keep track of only the words that start with the alphabet.
+
+while counter < len(sentence_list):  # we compare the counter against the length of the list using a while loop.
+    if sentence_list[counter][0] == alphabet: # we use an if statement to check each element in the list if that element begins with the Alphabet we set.
+        print("This word " + sentence_list[counter] + " begins with " + alphabet) # we then print out the out each element that begins with that Alphabet.
+        counter += 1 # we increment our counter by 1 every time there is an element in the list that starts with our alphabet.
+    else: 
+        counter += 1 # in our else statement we increment our counter by 1 if there is no match.
+
+print(word_counter, f"words begin with {alphabet}") # this will display the number of words that begins with the alphabet
